@@ -1,3 +1,125 @@
+/*********************************
+ * Set the bckground color for the page
+ *********************************/
 body {
-  background: peachpuff;
+  background: rgb(253, 215, 181);
 }
+
+/*********************************
+ * Set a border around each element
+ *********************************/
+ * {
+  border: 1px solid rgb(39, 165, 165);
+} 
+
+/*********************************
+* Configure the class named container and its child elements
+* These settings apply when the screen is less than 600 px
+*********************************/
+.container, .a {
+  display: flex;
+  min-height: 50em;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/********************************
+ * configured the flex box a for screen size less than 600px
+ *********************************/
+.a {
+  width: 100%;
+  min-height: 10em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(224, 224, 251);
+}
+
+/********************************
+ * set the background color for the flex boxes for screen size less than 600px
+ *********************************/
+.b-thru-d, .e-thru-g, .h {
+  display: flex;
+  background-color: rgb(248, 199, 140);
+  text-align: center;
+  flex-direction: row;
+  min-height: 10em;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+/********************************
+ * configured the flex boxes b - g for screen size less than 600px
+ *********************************/
+.b-thru-d, .e-thru-g {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  
+}
+
+.b-thru-d > div, .e-thru-g > div {
+  margin: 0.5em;
+  width: 25%;
+  min-height: 10em;
+  background-color: rgb(163, 233, 210);
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+} 
+
+/********************************
+ * configure the flex box containing the letter h for screen size less than 600px
+ *********************************/
+.h {
+  flex-grow: 4;
+  width: 100%;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  min-height: 10em;
+  font-weight: bold;
+  background-color: rgb(224, 224, 251);
+  justify-content: center;
+}
+
+/********************************
+ * Change the sceeen appearance if the screensize is 600px or more:
+ *********************************/
+ @media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .a {
+      width: 100%;
+      max-height: 10em;
+    }
+
+    .b-thru-d, .e-thru-g, .h {
+       flex-direction: row;
+    }
+  
+  .b-thru-d, .e-thru-g {
+    width: 80%;
+    align-items: center;
+    margin: 1em;
+    min-height: 10em;
+  }
+
+  .b-thru-d > div, .e-thru-g > div {
+    max-height: 10em;
+  }
+
+  .h {
+    flex-grow: 2;
+    max-height: 10em;
+  }
+
+ }

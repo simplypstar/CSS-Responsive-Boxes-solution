@@ -1,3 +1,112 @@
+/*********************************
+ * Set the background color for the page
+ *********************************/
 body {
-  background: papayawhip;
+  background: rgb(255, 239, 213);
 }
+/*********************************
+ * Set a border around each element
+ *********************************/
+ * {
+  border: 1px solid rgb(39, 165, 165);
+} 
+
+/*********************************
+* Configure the class named container and its child elements
+* These settings apply when the screen is less than 600 px
+*********************************/
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  justify-content: center;
+}
+
+/*********************************
+* Configure the flex boxes b thru e  
+*********************************/
+.b-thru-e {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  min-height: 10vh;
+}
+
+/*********************************
+* Configure the behavior and background color for all flex boxes for screen sizes over 600px
+*********************************/
+.a, .b, .c-thru-e, .f {
+  flex-grow: 1;
+  background-color: rgb(248, 199, 140);
+  margin: 0.5em;
+  min-height: 10vh;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*********************************
+* Configure the behavior and background color flex b when th screen size is less than 600px
+*********************************/
+.b {
+  flex-grow: 1;
+  background-color: rgb(83, 199, 199);
+  width: 95%;
+  min-height: 10vh;
+ 
+}
+
+/*********************************
+* Configure the background color flex c thru e when th screen size is less than 600px
+*********************************/
+.c-thru-e {
+  display: flex; 
+  flex-grow: 1;
+  /*justify-content: space-between;
+  justify-items: center;*/
+  min-height: 10vh;
+  width: 100%;
+  /*margin: 0.5em;*/
+ }
+
+.c-thru-e > div {
+   flex-grow: 1;
+   margin: 0.5em;
+   min-height: 10vh;
+   background-color: aquamarine;
+   justify-content: space-between;
+   justify-items: center;
+   /*text-align: center;*/
+} 
+
+/********************************
+ * Change the flex box appearance if the screensize is 600px or more:
+ *********************************/
+ @media (min-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
+  .a {
+      width: 100%;
+      min-height: 10vh;
+    }
+
+  
+  .c-thru-e {
+    width: 90%;
+    justify-content: stretch;
+    min-height: 10vh;
+  }
+
+  .f {
+    margin: 0.5em;
+    min-height: 70vh;
+    flex-grow: 5;
+    }
+
+ }

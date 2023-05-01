@@ -14,7 +14,7 @@ body {
 
 /*********************************
  * Configure the class named container and its child elements
- * These settings apply when the screen is less than 600 px
+ * These settings apply when the screen is less than 600px
  *********************************/
  .container {
   display: flex;
